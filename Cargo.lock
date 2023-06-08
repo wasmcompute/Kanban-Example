@@ -3,16 +3,6 @@
 version = 3
 
 [[package]]
-name = "Kanban-Example"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "conventually",
- "serde",
- "wasmcomputev3-lib",
-]
-
-[[package]]
 name = "anyhow"
 version = "1.0.71"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -55,8 +45,8 @@ dependencies = [
  "obake",
  "serde",
  "serde_json",
+ "tokactor",
  "tokio",
- "wc-actor",
 ]
 
 [[package]]
@@ -102,6 +92,16 @@ name = "itoa"
 version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "453ad9f582a441959e5f0d088b02ce04cfe8d51a8eaf077f12ac6d3e94164ca6"
+
+[[package]]
+name = "kanban-example"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "conventually",
+ "serde",
+ "wasmcomputev3-lib",
+]
 
 [[package]]
 name = "obake"
@@ -220,6 +220,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "tokactor"
+version = "1.0.0"
+dependencies = [
+ "tokio",
+ "tracing",
+]
+
+[[package]]
 name = "tokio"
 version = "1.28.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -305,14 +313,6 @@ version = "0.1.0"
 dependencies = [
  "wasmcompute-lib-core",
  "wasmcompute-lib-derive",
-]
-
-[[package]]
-name = "wc-actor"
-version = "0.1.0"
-dependencies = [
- "tokio",
- "tracing",
 ]
 
 [[package]]
